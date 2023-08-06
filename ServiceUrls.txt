@@ -1,0 +1,6 @@
+
+
+Web.ApiGateway			-> https://localhost:5000
+
+DirectoryService.Api	-> https://localhost:5001
+ReportService.Api		-> https://localhost:5002

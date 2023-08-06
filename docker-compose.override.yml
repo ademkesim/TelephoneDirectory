@@ -1,0 +1,75 @@
+version: '3.4'
+
+services:
+  reportservice.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5002
+    ports:
+      - "5002:5002"
+    networks:
+      - net_backendservices
+    depends_on:
+      - web.apigateway
+      - s_rabbitmq
+      - s_mongodb
+    external_links:
+      - s_rabbitmq
+      - s_mongodb
+
+  directoryservice.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5001
+    ports:
+      - "5001:5001"
+    networks:
+      - net_backendservices
+    depends_on:
+      - web.apigateway
+      - s_rabbitmq
+      - s_mongodb
+    external_links:
+      - s_rabbitmq
+      - s_mongodb
+
+  web.apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - "5000:5000"
+    networks:
+      - net_apigateway
+      - net_backendservices
+
+  s_rabbitmq:
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq
+    networks:
+      - net_backendservices
+      - net_apigateway
+
+  s_mongodb:
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data/db
+    networks:
+      - net_backendservices
+      - net_apigateway
+
+networks:
+  net_apigateway:
+    driver: bridge
+    external: true
+  net_backendservices:
+    driver: bridge
+    external: true
+
+volumes:
+  rabbitmq:
+  mongo:

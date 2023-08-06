@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+  reportservice.api:
+    container_name: c_reportservice
+    image: ${DOCKER_REGISTRY-}reportserviceapi
+    build:
+      context: .
+      dockerfile: src/Services/ReportService/ReportService.Api/Dockerfile
+
+  directoryservice.api:
+    container_name: c_directoryservice
+    image: ${DOCKER_REGISTRY-}directoryserviceapi
+    build:
+      context: .
+      dockerfile: src/Services/DirectoryService/DirectoryService.Api/Dockerfile
+
+  web.apigateway:
+    container_name: c_webapigateway
+    image: ${DOCKER_REGISTRY-}webapigateway
+    build:
+      context: .
+      dockerfile: src/ApiGateways/WebApiGateway/Web.ApiGateway/Dockerfile
+
+  s_rabbitmq:
+    container_name: c_rabbitmq
+    image: rabbitmq:3.12-management
+
+  s_mongodb:
+    container_name: c_mongodb
+    image: mongodb/mongodb-community-server:latest

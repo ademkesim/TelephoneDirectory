@@ -64,13 +64,10 @@ namespace EventBus.UnitTest
                 DefaultTopicName = "TelephoneDirectoryEventBus",
                 EventBusType = EventBusType.RabbitMQ,
                 EventNameSuffix = "IntegrationEvent",
-                //Connection = new ConnectionFactory()
-                //{
-                //    HostName = "localhost",
-                //    Port = 15672,
-                //    UserName = "guest",
-                //    Password = "guest"
-                //}
+                Connection = new ConnectionFactory()
+                {
+                    HostName = "c_rabbitmq"
+                }
             };
         }
     }

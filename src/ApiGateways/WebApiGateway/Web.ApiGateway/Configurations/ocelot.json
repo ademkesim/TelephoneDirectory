@@ -2,42 +2,42 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/Report/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "reportservice.api",
           "Port": 5002
         }
       ],
       "UpstreamPathTemplate": "/Report/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "UpstreamScheme": "https"
+      "UpstreamScheme": "http"
     },
     {
       "DownstreamPathTemplate": "/api/UserCommunication/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "directoryservice.api",
           "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/UserCommunication/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "UpstreamScheme": "https"
+      "UpstreamScheme": "http"
     },
     {
       "DownstreamPathTemplate": "/api/User/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "directoryservice.api",
           "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/User/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "UpstreamScheme": "https"
+      "UpstreamScheme": "http"
     }
   ]
 }

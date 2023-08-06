@@ -30,6 +30,10 @@ builder.Services.AddSingleton<IEventBus>(sp =>
         EventNameSuffix = "IntegrationEvent",
         SubscriberClientAppName = "DirectoryService",
         EventBusType = EventBusType.RabbitMQ,
+        Connection = new ConnectionFactory()
+        {
+            HostName = "c_rabbitmq"
+        }
     };
 
     return EventBusFactory.Create(config, sp);

@@ -3,7 +3,6 @@ using DirectoryService.Api.Core.Domain.Concrete;
 using DirectoryService.Api.Core.Domain.Concrete.DomainObjects;
 using DirectoryService.Api.Core.Domain.Concrete.RequestDTO;
 using DirectoryService.Api.Core.Domain.Concrete.ResponseDTO;
-using DirectoryService.Api.Core.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 

@@ -31,6 +31,10 @@ builder.Services.AddSingleton<IEventBus>(sp =>
         EventNameSuffix = "IntegrationEvent",
         SubscriberClientAppName = "ReportService",
         EventBusType = EventBusType.RabbitMQ,
+        Connection = new ConnectionFactory()
+        {
+            HostName = "c_rabbitmq"
+        }
     };
 
     return EventBusFactory.Create(config, sp);

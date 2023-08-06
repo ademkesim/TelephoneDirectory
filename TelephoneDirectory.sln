@@ -13,23 +13,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{79
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApiGateway", "WebApiGateway", "{E4A4FE2A-D398-4CB0-A5DE-3BBD6232067E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.ApiGateway", "src\ApiGateways\WebApiGateway\Web.ApiGateway\Web.ApiGateway.csproj", "{7E6262E5-B0E3-4A04-AC82-2426B3AE50A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.ApiGateway", "src\ApiGateways\WebApiGateway\Web.ApiGateway\Web.ApiGateway.csproj", "{7E6262E5-B0E3-4A04-AC82-2426B3AE50A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{936B0EC5-CA9A-4691-B921-33B49F1F5D80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Base", "src\BuildingBlocks\EventBus\EventBus.Base\EventBus.Base.csproj", "{E42D6149-E467-4200-88ED-9534667EBF7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Base", "src\BuildingBlocks\EventBus\EventBus.Base\EventBus.Base.csproj", "{E42D6149-E467-4200-88ED-9534667EBF7B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DirectoryService", "DirectoryService", "{E4FC54D5-256D-4A5B-8BA4-5EF69D4C0CAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryService.Api", "src\Services\DirectoryService\DirectoryService.Api\DirectoryService.Api.csproj", "{0E46D6A5-E041-477C-BCE5-079AAD6CBD78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectoryService.Api", "src\Services\DirectoryService\DirectoryService.Api\DirectoryService.Api.csproj", "{0E46D6A5-E041-477C-BCE5-079AAD6CBD78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Factory", "src\BuildingBlocks\EventBus\EventBus.Factory\EventBus.Factory.csproj", "{D8403EBF-DAA2-4702-9216-89B634180C4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Factory", "src\BuildingBlocks\EventBus\EventBus.Factory\EventBus.Factory.csproj", "{D8403EBF-DAA2-4702-9216-89B634180C4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\EventBus.RabbitMQ\EventBus.RabbitMQ.csproj", "{3E2C4B5A-541F-401A-823A-5731CC4E6CF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\EventBus.RabbitMQ\EventBus.RabbitMQ.csproj", "{3E2C4B5A-541F-401A-823A-5731CC4E6CF4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReportService", "ReportService", "{D6688526-3A7B-4F5A-9D34-3525366E80D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService.Api", "src\Services\ReportService\ReportService.Api\ReportService.Api.csproj", "{FECDC163-1BDE-4829-BAB1-2E478320C08C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportService.Api", "src\Services\ReportService\ReportService.Api\ReportService.Api.csproj", "{FECDC163-1BDE-4829-BAB1-2E478320C08C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{615D0E37-31F1-4FAC-9B58-3D03C5AE81B8}"
 	ProjectSection(SolutionItems) = preProject
@@ -40,7 +40,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F4B32A3B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{D561540C-BE1A-4CF4-8225-86F374E28180}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.UnitTest", "EventBus.UnitTest\EventBus.UnitTest.csproj", "{D72A6583-D0F7-46E8-A8FC-C7A8E9FA8FF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.UnitTest", "EventBus.UnitTest\EventBus.UnitTest.csproj", "{D72A6583-D0F7-46E8-A8FC-C7A8E9FA8FF2}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2BF86A82-7106-4B40-876B-26F2CB129775}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +78,10 @@ Global
 		{D72A6583-D0F7-46E8-A8FC-C7A8E9FA8FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D72A6583-D0F7-46E8-A8FC-C7A8E9FA8FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D72A6583-D0F7-46E8-A8FC-C7A8E9FA8FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BF86A82-7106-4B40-876B-26F2CB129775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF86A82-7106-4B40-876B-26F2CB129775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF86A82-7106-4B40-876B-26F2CB129775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF86A82-7106-4B40-876B-26F2CB129775}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

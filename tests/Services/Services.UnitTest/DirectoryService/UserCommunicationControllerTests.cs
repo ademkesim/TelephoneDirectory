@@ -34,7 +34,7 @@ namespace Services.UnitTest
         public async Task AddUserCommunication_ValidRequest_ReturnsOk()
         {
             // Arrange
-            var request = new AddUserCommunicationRequestDTO { /* Initialize your request here */ };
+            var request = new AddUserCommunicationRequestDTO();
             mockUserRepository.Setup(repo => repo.CheckUser(It.IsAny<Guid>())).Returns(true);
             mockUserCommunicationRepository.Setup(repo => repo.AddUserCommunicationAsync(It.IsAny<AddUserCommunicationRequestDTO>())).ReturnsAsync(new UserCommunicationInfo());
 

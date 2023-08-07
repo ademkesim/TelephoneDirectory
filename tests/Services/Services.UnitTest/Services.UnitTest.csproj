@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Services\DirectoryService\DirectoryService.Api\DirectoryService.Api.csproj" />
     <ProjectReference Include="..\..\..\src\Services\ReportService\ReportService.Api\ReportService.Api.csproj" />
   </ItemGroup>
 

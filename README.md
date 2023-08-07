@@ -1,6 +1,6 @@
 # Telephone Directory Microservices Project
 
-Telefon rehberi uygulaması için geliştirilmiş Microservices mimarisini ve Docker kapsayıcılarını temel alan bir .Net 6.0 projesidir. Projede temel CRUD işlemlerine ek olarak asenkron çalışması gereken methodlarda RabbitMQ kuyruk sistemi kullanılmıştır.
+Telefon rehberi uygulaması için geliştirilmiş Microservices mimarisini ve Docker kapsayıcılarını temel alan bir .Net 6.0 projesidir. Projede temel CRUD işlemlerine ek olarak RabbitMQ kuyruk sistemi kullanılmıştır.
 
 ## Başlarken
 

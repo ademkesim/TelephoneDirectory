@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using ReportService.Api.Core.Application.Repository;
+using ReportService.Api.Core.Constants;
 using ReportService.Api.Core.Domain.Concrete.Entities;
 using System.Linq.Expressions;
 
@@ -26,12 +27,16 @@ namespace ReportService.Api.Core.Infrastructure.Repository
             var options = new InsertOneOptions { BypassDocumentValidation = false };
             await reportCollection.InsertOneAsync(report, options);
 
+            _logger.LogInformation(ProjectConst.AddLogMessage, typeof(Report).Name);
+
             return report;
 
         }
 
         public async Task<Report> UpdateReportAsync(Report report)
         {
+            _logger.LogInformation(ProjectConst.UpdateLogMessage, typeof(Report).Name);
+
             return await reportCollection.FindOneAndReplaceAsync(x => x.Id == report.Id, report);
         }
 

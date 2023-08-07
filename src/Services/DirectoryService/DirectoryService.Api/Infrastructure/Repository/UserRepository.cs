@@ -1,4 +1,5 @@
 ﻿using DirectoryService.Api.Core.Application.Repository;
+using DirectoryService.Api.Core.Constants;
 using DirectoryService.Api.Core.Domain.Concrete;
 using DirectoryService.Api.Core.Domain.Concrete.DomainObjects;
 using Microsoft.Extensions.Options;
@@ -28,11 +29,16 @@ namespace DirectoryService.Api.Infrastructure.Repository
         {
             var options = new InsertOneOptions { BypassDocumentValidation = false };
             await userCollection.InsertOneAsync(entity, options);
+
+            _logger.LogInformation(ProjectConst.AddLogMessage, typeof(UserInfo).Name);
+
             return entity;
         }
 
         public async Task<UserInfo> DeleteUserAsync(Guid id)
         {
+            _logger.LogInformation(ProjectConst.DeleteLogMessage, typeof(UserInfo).Name);
+
             return await userCollection.FindOneAndDeleteAsync(x => x.Id == id);
         }
 

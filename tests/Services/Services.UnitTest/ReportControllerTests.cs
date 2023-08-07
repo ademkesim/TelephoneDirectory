@@ -20,7 +20,8 @@ namespace Services.UnitTest
         private Mock<ILogger<ReportController>> mockLogger;
         private ReportController reportController;
 
-        public ReportControllerTests()
+        [TestInitialize]
+        public void Setup()
         {
             mockReportRepository = new Mock<IReportRepository>();
             mockReportDetailRepository = new Mock<IReportDetailRepository>();

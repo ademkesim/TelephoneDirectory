@@ -1,6 +1,7 @@
 ﻿using EventBus.Base.Abstraction;
 using Microsoft.AspNetCore.Mvc;
 using ReportService.Api.Core.Application.Repository;
+using ReportService.Api.Core.Constants;
 using ReportService.Api.Core.Domain.Concrete.Entities;
 using ReportService.Api.Core.Domain.Concrete.RequestDTO;
 using ReportService.Api.Core.Domain.Concrete.ResponseDTO;
@@ -31,13 +32,15 @@ namespace ReportService.Api.Controllers
         [ProducesResponseType(typeof(RequestReportResponseDTO), (int)HttpStatusCode.OK)]
         public async Task<ActionResult> RequestReportAsync([FromBody] RequestReportRequestDTO request)
         {
+            _logger.LogInformation(ProjectConst.ReportRequestRecived);
+
             var report = new Report()
             {
                 ReportStatus = Core.Enums.ReportStatusEnum.Pending
             };
             var response = await reportRepository.AddReportAsync(report);
 
-            var eventMessage = new RequestReportIntegrationEvent(response.Id, request.Locations);
+            var eventMessage = new RequestReportIntegrationEvent(response.Id);
             try
             {
                 _eventBus.Publish(eventMessage);

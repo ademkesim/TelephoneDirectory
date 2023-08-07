@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Options;
+﻿using ReportService.Api.Core.Constants;
+using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using ReportService.Api.Core.Application.Repository;
 using ReportService.Api.Core.Domain.Concrete.Entities;
@@ -25,6 +26,8 @@ namespace ReportService.Api.Core.Infrastructure.Repository
         {
             var options = new InsertOneOptions { BypassDocumentValidation = false };
             await reportDetailCollection.InsertOneAsync(reportDetail, options);
+
+            _logger.LogInformation(ProjectConst.AddLogMessage, typeof(ReportDetail).Name);
 
             return reportDetail;
         }

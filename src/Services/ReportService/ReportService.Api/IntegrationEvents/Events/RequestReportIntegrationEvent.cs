@@ -4,12 +4,10 @@ namespace ReportService.Api.IntegrationEvents.Events
 {
     public class RequestReportIntegrationEvent : IntegrationEvent
     {
-        public List<string>? Locations { get; set; }
         public Guid ReportId { get; set; }
-        public RequestReportIntegrationEvent(Guid reportId, List<string>? locations)
+        public RequestReportIntegrationEvent(Guid reportId)
         {
             ReportId = reportId;
-            Locations = locations;
         }
     }
 }

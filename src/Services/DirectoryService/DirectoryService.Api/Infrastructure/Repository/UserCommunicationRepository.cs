@@ -1,4 +1,5 @@
 ﻿using DirectoryService.Api.Core.Application.Repository;
+using DirectoryService.Api.Core.Constants;
 using DirectoryService.Api.Core.Domain.Concrete;
 using DirectoryService.Api.Core.Domain.Concrete.RequestDTO;
 using Microsoft.Extensions.Options;
@@ -37,11 +38,16 @@ namespace DirectoryService.Api.Infrastructure.Repository
             };
 
             await userCommunicationCollection.InsertOneAsync(addedData, options);
+
+            _logger.LogInformation(ProjectConst.AddLogMessage, typeof(UserCommunicationInfo).Name);
+
             return addedData;
         }
 
         public async Task<UserCommunicationInfo> DeleteUserCommunicationAsync(Guid id)
         {
+            _logger.LogInformation(ProjectConst.DeleteLogMessage, typeof(UserCommunicationInfo).Name);
+
             return await userCommunicationCollection.FindOneAndDeleteAsync(x => x.Id == id);
         }
 
